@@ -53,6 +53,12 @@ And only radar:
 
 ![Radar Only](https://github.com/bhatiarajesh/CarND-Extended-Kalman-Filter-Project/raw/master/out/Visualization-With-RADAR-Only.png)
 
+## Conclusion
+
+I ensured that the code compiles with make and make. I collected the positions that my algorithm outputs and compared them to ground truth data. My px, py, vx, and vy RMSE was less than or equal to the values [.11, .11, 0.52, 0.52].My algorithm uses the first measurements to initialize the state vectors and covariance matrices. Upon receiving a measurement after the first, my algorithm predicted the object position to the current timestamp and then updated the prediction using the new measurement. The Kalman Filter algorithm handles both radar and lidar measurements. I also experimented to see the impact of using either LIDAR or RADAR data and analyzed the RMSE. The fused LIDAR and RADAR values were found to be the best in terms of all the state related parameters. (px, py, vx and vy). I could have further changed the noise values to review the impact on RMSE. The 2-D Unity kalman filer simulator was used to study the LIDAR/RADAR and combined sensor fusion effects to track results.
+
+
+
 ## Project Instructions and Rubric
 
 Note: regardless of the changes you make, your project must be buildable using
